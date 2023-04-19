@@ -1,21 +1,11 @@
 # Changelog
 
-## [Unreleased](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
+## [Unreleased](https://github.com/Azure/terraform-azurerm-mdc-defender-plans-azure/tree/HEAD)
 
 **Merged pull requests:**
 
-- Bump github.com/gruntwork-io/terratest from 0.41.17 to 0.41.18 in /test [\#22](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Change container roles and output names [\#21](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/21) ([oribenartzyM](https://github.com/oribenartzyM))
-- Bump github.com/Azure/terraform-module-test-helper from 0.10.0 to 0.13.0 in /test [\#20](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump github.com/gruntwork-io/terratest from 0.41.15 to 0.41.17 in /test [\#19](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Update ci files, change sqlserver virtual machines toggle expression [\#18](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/18) ([lonegunmanb](https://github.com/lonegunmanb))
-- Oribenazrtzy/add roles extensions to module [\#17](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/17) ([oribenartzyM](https://github.com/oribenartzyM))
-- Use definition display name for policies [\#16](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/16) ([oribenartzyM](https://github.com/oribenartzyM))
-- Add extensions to module [\#13](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/13) ([oribenartzyM](https://github.com/oribenartzyM))
-- Bump github.com/gruntwork-io/terratest from 0.41.12 to 0.41.15 in /test [\#11](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Add CosmosDbs to MDC default databases and plans [\#10](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/10) ([yuvmel](https://github.com/yuvmel))
-- Oribenartzy/changing the input from tier to status [\#5](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/5) ([oribenartzyM](https://github.com/oribenartzyM))
-- Add test to this module [\#3](https://github.com/oribenartzyM/terraform-azure-mdc-defender-plans-azure/pull/3) ([lonegunmanb](https://github.com/lonegunmanb))
+- Clone origin repository [\#4](https://github.com/Azure/terraform-azurerm-mdc-defender-plans-azure/pull/4) ([oribenartzyM](https://github.com/oribenartzyM))
+- Adding Microsoft SECURITY.MD [\#2](https://github.com/Azure/terraform-azurerm-mdc-defender-plans-azure/pull/2) ([microsoft-github-policy-service[bot]](https://github.com/apps/microsoft-github-policy-service))
 
 
 

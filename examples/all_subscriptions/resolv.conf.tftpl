@@ -1,0 +1,16 @@
+%{ for subscription in list_of_subscriptions ~}
+provider "azurerm" {
+    alias           = "sub${index(list_of_subscriptions, "${subscription}")}"
+    subscription_id = "${subscription}"
+    features {}
+}
+
+module "mdc_plans_enable_${index(list_of_subscriptions, "${subscription}")}" {
+    source                  = "../../../"
+    default_status          = ${status}
+    mdc_plans_list          = ${mdc_plans_list}
+    subplans                = ${subplans}
+    providers               = { azurerm = azurerm.sub${index(list_of_subscriptions, "${subscription}")} }
+}
+
+%{ endfor ~}

@@ -1,5 +1,9 @@
 # terraform-azure-mdc-defender-plans-azure
 
+> **NOTE:**
+>
+> This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
+
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
 This Terraform module turn on Microsoft Defender for Cloud (MDC) plans for single or multiple subscriptions.

@@ -1,6 +1,111 @@
-# Microsoft Defender for Cloud
+# terraform-azure-mdc-defender-plans-azure
 
-Terraform module for MDC onboarding
+## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
+
+This Terraform module turn on Microsoft Defender for Cloud (MDC) plans for single or multiple subscriptions.
+ 
+### Terraform and terraform-provider-azurerm version restrictions
+
+Terraform core's version is v1.x and terraform-provider-azurerm's version is v3.x.
+
+## Example Usage
+
+Please refer to the sub folders under `examples` folder. 
+
+For your convenience there are four different examples of using the module:
+1. Single subscription - onboarding to a single subscription.
+2. Chosen subscriptions - onboarding to a list of subscription.
+3. All subscription - onboarding to all subscriptions your account have owner permission on.
+4. Mangement group - onboarding to all the subscription in a management group.
+ 
+For **single subscription** example you can execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
+
+For **mangement group, chosen and all subscription** examples you can execute `terraform apply` command. After executing, a new directory name `output` will be added to the example folder. Enter the new `output` folder, edit the `main` file for your needs and execute `terraform apply` again.
+
+ These examples are tested against every PR with the [E2E Test](#Pre-Commit--Pr-Check--Test).
+
+## Pre-Commit & Pr-Check & Test
+
+### Configurations
+
+- [Configure Terraform for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure)
+
+We assumed that you have setup service principal's credentials in your environment variables like below:
+
+```shell
+export ARM_SUBSCRIPTION_ID="<azure_subscription_id>"
+export ARM_TENANT_ID="<azure_subscription_tenant_id>"
+export ARM_CLIENT_ID="<service_principal_appid>"
+export ARM_CLIENT_SECRET="<service_principal_password>"
+```
+
+On Windows Powershell:
+
+```shell
+$env:ARM_SUBSCRIPTION_ID="<azure_subscription_id>"
+$env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
+$env:ARM_CLIENT_ID="<service_principal_appid>"
+$env:ARM_CLIENT_SECRET="<service_principal_password>"
+```
+
+We provide a docker image to run the pre-commit checks and tests for you: `mcr.microsoft.com/azterraform:latest`
+
+To run the pre-commit task, we can run the following command:
+
+```shell
+$ docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/azterraform:latest make pre-commit
+```
+
+On Windows Powershell:
+
+```shell
+$ docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest make pre-commit
+```
+
+In pre-commit task, we will:
+
+1. Run `terraform fmt -recursive` command for your Terraform code.
+2. Run `terrafmt fmt -f` command for markdown files and go code files to ensure that the Terraform code embedded in these files are well formatted.
+3. Run `go mod tidy` and `go mod vendor` for test folder to ensure that all the dependencies have been synced.
+4. Run `gofmt` for all go code files.
+5. Run `gofumpt` for all go code files.
+6. Run `terraform-docs` on `README.md` file, then run `markdown-table-formatter` to format markdown tables in `README.md`.
+
+Then we can run the pr-check task to check whether our code meets our pipeline's requirement (We strongly recommend you run the following command before you commit):
+
+```shell
+$ docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/azterraform:latest make pr-check
+```
+
+On Windows Powershell:
+
+```shell
+$ docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest make pr-check
+```
+
+To run the e2e-test, we can run the following command:
+
+```text
+docker run --rm -v $(pwd):/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET mcr.microsoft.com/azterraform:latest make e2e-test
+```
+
+On Windows Powershell:
+
+```text
+docker run --rm -v ${pwd}:/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET mcr.microsoft.com/azterraform:latest make e2e-test
+```
+
+#### Prerequisites
+
+- [Docker](https://www.docker.com/community-edition#/download)
+
+## Authors
+
+Originally created by [Eli Betito](https://github.com/elibetito-microsoft) and [Ori Ben Arzty](https://github.com/oribenartzyM)
+
+## License
+
+[MIT](LICENSE)
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

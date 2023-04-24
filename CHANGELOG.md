@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/Azure/terraform-azurerm-mdc-defender-plans-azure/tree/HEAD)
+## [Unreleased](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
 
 **Merged pull requests:**
 
-- Clone origin repository [\#4](https://github.com/Azure/terraform-azurerm-mdc-defender-plans-azure/pull/4) ([oribenartzyM](https://github.com/oribenartzyM))
-- Adding Microsoft SECURITY.MD [\#2](https://github.com/Azure/terraform-azurerm-mdc-defender-plans-azure/pull/2) ([microsoft-github-policy-service[bot]](https://github.com/apps/microsoft-github-policy-service))
+- ReadMe file update [\#5](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/5) ([oribenartzyM](https://github.com/oribenartzyM))
+- Clone origin repository [\#4](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/4) ([oribenartzyM](https://github.com/oribenartzyM))
+- Adding Microsoft SECURITY.MD [\#2](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/2) ([microsoft-github-policy-service[bot]](https://github.com/apps/microsoft-github-policy-service))
 
 
 

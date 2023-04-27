@@ -1,8 +1,11 @@
 # terraform-azure-mdc-defender-plans-azure
 
-> **NOTE:**
->
+> **Note:**
 > This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
+
+> **Warning:**
+> Deletion of this resource does not change or reset the pricing tier to Free.
+
 
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
@@ -20,7 +23,7 @@ For your convenience there are four different examples of using the module:
 1. Single subscription - onboarding to a single subscription.
 2. Chosen subscriptions - onboarding to a list of subscription.
 3. All subscription - onboarding to all subscriptions your account have owner permission on.
-4. Mangement group - onboarding to all the subscription in a management group.
+4. Management group - onboarding to all the subscription in a management group.
  
 For **single subscription** example you can execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
 

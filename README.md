@@ -1,8 +1,9 @@
 # terraform-azure-mdc-defender-plans-azure
 
-> **NOTE:**
->
-> This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
+-> **Note:** This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
+
+~> **Note:** Deletion of this resource does not change or reset the pricing status to false.
+
 
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
@@ -14,19 +15,26 @@ Terraform core's version is v1.x and terraform-provider-azurerm's version is v3.
 
 ## Example Usage
 
+### <u>Enable plans</u>
+
 Please refer to the sub folders under `examples` folder. 
 
 For your convenience there are four different examples of using the module:
 1. Single subscription - onboarding to a single subscription.
 2. Chosen subscriptions - onboarding to a list of subscription.
 3. All subscription - onboarding to all subscriptions your account have owner permission on.
-4. Mangement group - onboarding to all the subscription in a management group.
+4. Management group - onboarding to all the subscription in a management group.
  
 For **single subscription** example you can execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
 
 For **mangement group, chosen and all subscription** examples you can execute `terraform apply` command. After executing, a new directory name `output` will be added to the example folder. Enter the new `output` folder, edit the `main` file for your needs and execute `terraform apply` again.
 
- These examples are tested against every PR with the [E2E Test](#Pre-Commit--Pr-Check--Test).
+ These examples are tested against every PR with the E2E test.
+
+### <u>Disable plans</u>
+To disable plans execute `terraform apply` command while status is equal to false.
+
+Then, execute `terraform destroy`, to destroy all the extensions (dissociate policies and rules).
 
 ## Pre-Commit & Pr-Check & Test
 

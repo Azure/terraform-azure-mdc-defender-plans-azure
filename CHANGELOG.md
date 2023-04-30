@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
+
+**Merged pull requests:**
+
+- Add outputs.tf files to examples [\#7](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/7) ([oribenartzyM](https://github.com/oribenartzyM))
+- Readme update [\#6](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/6) ([oribenartzyM](https://github.com/oribenartzyM))
+
 ## [v0.1.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.1.0) (2023-04-24)
 
 **Merged pull requests:**

@@ -21,6 +21,10 @@ jobs:
       name: acctests
     steps:
       - uses: actions/checkout@v3
+      - name: preinit
+        run: |
+          hostnamectl
+          [ -n "$GITHUB_TOKEN" ] && echo "Non-empty variable."
       - name: init
         run: |
           docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/azterraform:latest make generate

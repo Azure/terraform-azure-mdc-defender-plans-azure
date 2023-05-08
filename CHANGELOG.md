@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Add tracing tags toggle variables into this module [\#10](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/10) ([lonegunmanb](https://github.com/lonegunmanb))
 - Bump github.com/gruntwork-io/terratest from 0.41.18 to 0.41.23 in /test [\#8](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/8) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Add outputs.tf files to examples [\#7](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/7) ([oribenartzyM](https://github.com/oribenartzyM))
 - Readme update [\#6](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/6) ([oribenartzyM](https://github.com/oribenartzyM))

@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump github.com/gruntwork-io/terratest from 0.41.24 to 0.42.0 in /test [\#14](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/stretchr/testify from 1.8.2 to 1.8.3 in /test [\#13](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.41.23 to 0.41.24 in /test [\#11](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Add tracing tags toggle variables into this module [\#10](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/10) ([lonegunmanb](https://github.com/lonegunmanb))

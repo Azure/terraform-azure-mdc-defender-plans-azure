@@ -119,7 +119,7 @@ Originally created by [Eli Betito](https://github.com/elibetito-microsoft) and [
 
 [MIT](LICENSE)
 
-# Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us

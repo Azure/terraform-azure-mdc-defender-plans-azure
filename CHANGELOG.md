@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- modify the README according to legal client guidance [\#18](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/18) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Bump github.com/Azure/terraform-module-test-helper from 0.13.0 to 0.14.0 in /test [\#17](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.42.0 to 0.43.0 in /test [\#16](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/stretchr/testify from 1.8.3 to 1.8.4 in /test [\#15](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))

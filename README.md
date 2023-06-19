@@ -1,8 +1,8 @@
 # terraform-azure-mdc-defender-plans-azure
 
--> **Note:** This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
+-> **NOTE:** This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
 
-~> **Note:** Deletion of this resource does not change or reset the pricing status to false.
+~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
 
 
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
@@ -32,12 +32,11 @@ For **mangement group, chosen and all subscription** examples you can execute `t
  These examples are tested against every PR with the E2E test.
 
 ### <u>Disable plans</u>
-To disable plans execute `terraform apply` command while status is equal to false.
+* To disable all plans execute `terraform destroy` command.
 
-Then, execute `terraform destroy`, to destroy all the extensions (dissociate policies and rules).
+* To disable a specific plan, remove the plan name from mdc_plans_list var and execute `terraform apply` command.
 
 ## Pre-Commit & Pr-Check & Test
-
 ### Configurations
 
 - [Configure Terraform for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure)

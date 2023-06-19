@@ -17,12 +17,6 @@ variable "mdc_plans_list" {
   description = "(Optional) Set of all MDC plans"
 }
 
-variable "status" {
-  type        = bool
-  default     = true
-  description = "(Optional) The status to use. Valid values are `true` for enable, `false` for disable."
-}
-
 variable "subplans" {
   type = map(string)
   default = {

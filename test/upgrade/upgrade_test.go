@@ -8,7 +8,6 @@ import (
 )
 
 func TestExampleUpgrade_basic(t *testing.T) {
-	t.Setenv("block", "parallel")
 	currentRoot, err := test_helper.GetCurrentModuleRootPath()
 	if err != nil {
 		t.FailNow()

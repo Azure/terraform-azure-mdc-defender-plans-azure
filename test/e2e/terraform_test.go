@@ -9,7 +9,6 @@ import (
 )
 
 func TestExamples_single_subscription(t *testing.T) {
-	t.Setenv("block", "parallel")
 	plans := []string{
 		"AppServices",
 		"Arm",

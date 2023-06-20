@@ -3,7 +3,6 @@ output "plans_details" {
   value = {
     for name, pricing in azurerm_security_center_subscription_pricing.asc_plans : name => {
       id      = pricing.id
-      status  = pricing.tier == "Standard"
       subplan = pricing.subplan
     }
   }

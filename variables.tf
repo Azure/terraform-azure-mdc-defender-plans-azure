@@ -1,7 +1,7 @@
-variable "default_status" {
-  type        = bool
-  default     = true
-  description = "(Optional) Default status to use. Valid values are `true` for enable, `false` for disable."
+variable "default_tier" {
+  type        = string
+  default     = "Standard"
+  description = "(Optional) The pricing tier to use. Possible values are `Free` and `Standard`"
   nullable    = false
 }
 
@@ -46,13 +46,6 @@ variable "mdc_plans_list" {
     "VirtualMachines",
   ]
   description = "(Optional) Set of all MDC plans"
-  nullable    = false
-}
-
-variable "statuses" {
-  type        = map(bool)
-  default     = {}
-  description = "(Optional) A map of the status to use, the key is resource type and the value is status. This variable takes precedence over `var.default_status`."
   nullable    = false
 }
 

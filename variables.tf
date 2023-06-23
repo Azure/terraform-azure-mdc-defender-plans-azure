@@ -1,14 +1,14 @@
+variable "default_subplan" {
+  type        = string
+  default     = null
+  description = "(Optional) Resource type pricing default subplan. Contact your MSFT representative for possible values"
+}
+
 variable "default_tier" {
   type        = string
   default     = "Standard"
   description = "(Optional) The pricing tier to use. Possible values are `Free` and `Standard`"
   nullable    = false
-}
-
-variable "default_subplan" {
-  type        = string
-  default     = null
-  description = "(Optional) Resource type pricing default subplan. Contact your MSFT representative for possible values"
 }
 
 variable "location" {

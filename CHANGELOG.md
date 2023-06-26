@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
+
+**Merged pull requests:**
+
+- Bump github.com/gruntwork-io/terratest from 0.43.0 to 0.43.4 in /test [\#20](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.2.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.2.0) (2023-06-21)
 
 **Merged pull requests:**

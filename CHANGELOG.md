@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump github.com/gruntwork-io/terratest from 0.43.4 to 0.43.6 in /test [\#21](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.43.0 to 0.43.4 in /test [\#20](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v0.2.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.2.0) (2023-06-21)

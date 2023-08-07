@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump github.com/Azure/terraform-module-test-helper from 0.14.0 to 0.16.0 in /test [\#28](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/28) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.43.8 to 0.43.9 in /test [\#25](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/25) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.43.7 to 0.43.8 in /test [\#24](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/24) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.43.6 to 0.43.7 in /test [\#23](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/23) ([dependabot[bot]](https://github.com/apps/dependabot))

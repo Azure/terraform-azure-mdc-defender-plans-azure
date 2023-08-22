@@ -44,6 +44,8 @@ variable "mdc_plans_list" {
     "CosmosDbs",
     "StorageAccounts",
     "VirtualMachines",
+    "CloudPosture",
+    "Api",
   ]
   description = "(Optional) Set of all MDC plans"
   nullable    = false

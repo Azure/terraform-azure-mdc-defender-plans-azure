@@ -22,7 +22,6 @@ func TestExamples_single_subscription(t *testing.T) {
 		"CosmosDbs",
 		"StorageAccounts",
 		"VirtualMachines",
-		"CloudPosture",
 		"Api",
 	}
 	test_helper.RunE2ETest(t, "../../", "examples/single_subscription", terraform.Options{

@@ -1,6 +1,6 @@
 locals {
   plans_without_databases = contains(var.mdc_plans_list, "Databases") ? setsubtract(setunion(var.mdc_plans_list, var.mdc_databases_plans), ["Databases"]) : var.mdc_plans_list
-  final_plans_list = contains(var.mdc_plans_list, "CloudPosture") ? setsubtract(setunion(local.plans_without_databases), ["CloudPosture"]) : local.plans_without_databases
+  final_plans_list        = contains(var.mdc_plans_list, "CloudPosture") ? setsubtract(setunion(local.plans_without_databases), ["CloudPosture"]) : local.plans_without_databases
 }
 
 data "azurerm_subscription" "current" {}

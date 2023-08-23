@@ -5,16 +5,16 @@ resource "azurerm_security_center_subscription_pricing" "cloudposture" {
   resource_type = "CloudPosture"
 
   extension {
-    name= "SensitiveDataDiscovery"
+    name = "SensitiveDataDiscovery"
   }
   extension {
-    name= "ContainerRegistriesVulnerabilityAssessments"
+    name = "ContainerRegistriesVulnerabilityAssessments"
   }
   extension {
-    name= "AgentlessDiscoveryForKubernetes"
+    name = "AgentlessDiscoveryForKubernetes"
   }
   extension {
-    name= "AgentlessVmScanning"
+    name = "AgentlessVmScanning"
     additional_extension_properties = {
       ExclusionTags = "[]"
     }

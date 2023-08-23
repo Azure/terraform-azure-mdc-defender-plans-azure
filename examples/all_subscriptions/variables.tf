@@ -14,7 +14,6 @@ variable "mdc_plans_list" {
     "CosmosDbs",
     "StorageAccounts",
     "VirtualMachines",
-    "CloudPosture",
     "Api",
   ]
 }

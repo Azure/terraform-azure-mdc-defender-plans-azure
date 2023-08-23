@@ -12,7 +12,6 @@ func TestExamples_single_subscription(t *testing.T) {
 	plans := []string{
 		"AppServices",
 		"Arm",
-		"CloudPosture",
 		"Containers",
 		"Dns",
 		"KeyVaults",

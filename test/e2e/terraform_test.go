@@ -13,7 +13,6 @@ func TestExamples_single_subscription(t *testing.T) {
 		"AppServices",
 		"Arm",
 		"Containers",
-		"Dns",
 		"KeyVaults",
 		"OpenSourceRelationalDatabases",
 		"SqlServers",

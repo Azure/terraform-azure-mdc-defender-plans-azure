@@ -36,7 +36,6 @@ variable "mdc_plans_list" {
     "Arm",
     "CloudPosture",
     "Containers",
-    "Dns",
     "KeyVaults",
     "OpenSourceRelationalDatabases",
     "SqlServers",

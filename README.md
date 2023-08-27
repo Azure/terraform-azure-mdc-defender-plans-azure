@@ -13,6 +13,22 @@ This Terraform module turn on Microsoft Defender for Cloud (MDC) plans for singl
 
 Terraform core's version is v1.x and terraform-provider-azurerm's version is v3.x.
 
+## Module Usage
+
+Example for single subscription:
+
+```tf
+module "mdc-defender-plans-azure" {
+  source  = "Azure/mdc-defender-plans-azure/azure"
+  mdc_plans_list = <list of plans to onboard>
+}
+
+provider "azurerm" {
+  features {}
+}
+```
+Execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
+
 ## Example Usage
 
 ### <u>Enable plans</u>
@@ -29,14 +45,12 @@ For **single subscription** example you can execute `terraform apply` command, t
 
 For **mangement group, chosen and all subscription** examples you can execute `terraform apply` command. After executing, a new directory name `output` will be added to the example folder. Enter the new `output` folder, edit the `main` file for your needs and execute `terraform apply` again.
 
- These examples are tested against every PR with the E2E test.
-
 ### <u>Disable plans</u>
 * To disable all plans execute `terraform destroy` command.
 
 * To disable a specific plan, remove the plan name from mdc_plans_list var and execute `terraform apply` command.
 
-## Pre-Commit & Pr-Check & Test
+## Contributing
 ### Configurations
 
 - [Configure Terraform for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure)
@@ -58,6 +72,8 @@ $env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
 $env:ARM_CLIENT_ID="<service_principal_appid>"
 $env:ARM_CLIENT_SECRET="<service_principal_password>"
 ```
+
+### Pre-Commit & Pr-Check &  E2E Test
 
 We provide a docker image to run the pre-commit checks and tests for you: `mcr.microsoft.com/azterraform:latest`
 
@@ -106,20 +122,6 @@ On Windows Powershell:
 docker run --rm -v ${pwd}:/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET mcr.microsoft.com/azterraform:latest make e2e-test
 ```
 
-#### Prerequisites
-
-- [Docker](https://www.docker.com/community-edition#/download)
-
-## Authors
-
-Originally created by [Eli Betito](https://github.com/elibetito-microsoft) and [Ori Ben Arzty](https://github.com/oribenartzyM)
-
-## License
-
-[MIT](LICENSE)
-
-## Contributing
-
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
@@ -131,6 +133,14 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Authors
+
+Originally created by [Eli Betito](https://github.com/elibetito-microsoft) and [Ori Ben Arzty](https://github.com/oribenartzyM)
+
+## License
+
+[MIT](LICENSE)
 
 ## Module Spec
 
@@ -179,16 +189,16 @@ No modules.
 
 ## Inputs
 
-| Name                                                                                               | Description                                                                                                                                                                                  | Type          | Default                                                                                                                                                                                                                                                                                        | Required |
-|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
-| <a name="input_default_subplan"></a> [default\_subplan](#input\_default\_subplan)                  | (Optional) Resource type pricing default subplan. Contact your MSFT representative for possible values                                                                                       | `string`      | `null`                                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_default_tier"></a> [default\_tier](#input\_default\_tier)                           | (Optional) The pricing tier to use. Possible values are `Free` and `Standard`                                                                                                                | `string`      | `"Standard"`                                                                                                                                                                                                                                                                                   |    no    |
-| <a name="input_location"></a> [location](#input\_location)                                         | (Optional) The location/region where the policy should exist.                                                                                                                                | `string`      | `"West Europe"`                                                                                                                                                                                                                                                                                |    no    |
-| <a name="input_mdc_databases_plans"></a> [mdc\_databases\_plans](#input\_mdc\_databases\_plans)    | (Optional) Set of all MDC databases plans                                                                                                                                                    | `set(string)` | <pre>[<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs"<br>]</pre>                                                                                                                                                                   |    no    |
-| <a name="input_mdc_plans_list"></a> [mdc\_plans\_list](#input\_mdc\_plans\_list)                   | (Optional) Set of all MDC plans                                                                                                                                                              | `set(string)` | <pre>[<br>  "AppServices",<br>  "Arm",<br>  "CloudPosture",<br>  "Containers",<br>  "Dns",<br>  "KeyVaults",<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs",<br>  "StorageAccounts",<br>  "VirtualMachines",<br>  "Api"<br>]</pre> |    no    |
-| <a name="input_subplans"></a> [subplans](#input\_subplans)                                         | (Optional) A map of resource type pricing subplan, the key is resource type. This variable takes precedence over `var.default_subplan`. Contact your MSFT representative for possible values | `map(string)` | `{}`                                                                                                                                                                                                                                                                                           |    no    |
-| <a name="input_tracing_tags_enabled"></a> [tracing\_tags\_enabled](#input\_tracing\_tags\_enabled) | Whether enable tracing tags that generated by BridgeCrew Yor.                                                                                                                                | `bool`        | `false`                                                                                                                                                                                                                                                                                        |    no    |
-| <a name="input_tracing_tags_prefix"></a> [tracing\_tags\_prefix](#input\_tracing\_tags\_prefix)    | Default prefix for generated tracing tags                                                                                                                                                    | `string`      | `"avm_"`                                                                                                                                                                                                                                                                                       |    no    |
+| Name                                                                                               | Description                                                                                                                                                                                  | Type          | Default                                                                                                                                                                                                                                                                            | Required |
+|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
+| <a name="input_default_subplan"></a> [default\_subplan](#input\_default\_subplan)                  | (Optional) Resource type pricing default subplan. Contact your MSFT representative for possible values                                                                                       | `string`      | `null`                                                                                                                                                                                                                                                                             |    no    |
+| <a name="input_default_tier"></a> [default\_tier](#input\_default\_tier)                           | (Optional) The pricing tier to use. Possible values are `Free` and `Standard`                                                                                                                | `string`      | `"Standard"`                                                                                                                                                                                                                                                                       |    no    |
+| <a name="input_location"></a> [location](#input\_location)                                         | (Optional) The location/region where the policy should exist.                                                                                                                                | `string`      | `"West Europe"`                                                                                                                                                                                                                                                                    |    no    |
+| <a name="input_mdc_databases_plans"></a> [mdc\_databases\_plans](#input\_mdc\_databases\_plans)    | (Optional) Set of all MDC databases plans                                                                                                                                                    | `set(string)` | <pre>[<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs"<br>]</pre>                                                                                                                                                       |    no    |
+| <a name="input_mdc_plans_list"></a> [mdc\_plans\_list](#input\_mdc\_plans\_list)                   | (Optional) Set of all MDC plans                                                                                                                                                              | `set(string)` | <pre>[<br>  "AppServices",<br>  "Arm",<br>  "CloudPosture",<br>  "Containers",<br>  "KeyVaults",<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs",<br>  "StorageAccounts",<br>  "VirtualMachines",<br>  "Api"<br>]</pre> |    no    |
+| <a name="input_subplans"></a> [subplans](#input\_subplans)                                         | (Optional) A map of resource type pricing subplan, the key is resource type. This variable takes precedence over `var.default_subplan`. Contact your MSFT representative for possible values | `map(string)` | `{}`                                                                                                                                                                                                                                                                               |    no    |
+| <a name="input_tracing_tags_enabled"></a> [tracing\_tags\_enabled](#input\_tracing\_tags\_enabled) | Whether enable tracing tags that generated by BridgeCrew Yor.                                                                                                                                | `bool`        | `false`                                                                                                                                                                                                                                                                            |    no    |
+| <a name="input_tracing_tags_prefix"></a> [tracing\_tags\_prefix](#input\_tracing\_tags\_prefix)    | Default prefix for generated tracing tags                                                                                                                                                    | `string`      | `"avm_"`                                                                                                                                                                                                                                                                           |    no    |
 
 ## Outputs
 

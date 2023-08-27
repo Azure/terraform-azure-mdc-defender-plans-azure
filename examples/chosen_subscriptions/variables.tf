@@ -5,7 +5,6 @@ variable "mdc_plans_list" {
     "Arm",
     "CloudPosture",
     "Containers",
-    "Dns",
     "KeyVaults",
     "OpenSourceRelationalDatabases",
     "SqlServers",
@@ -13,6 +12,7 @@ variable "mdc_plans_list" {
     "CosmosDbs",
     "StorageAccounts",
     "VirtualMachines",
+    "Api",
   ]
   description = "(Optional) Set of all MDC plans"
 }

@@ -7,36 +7,46 @@
 
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
-This Terraform module turn on Microsoft Defender for Cloud (MDC) plans for single or multiple subscriptions.
- 
+This Terraform module activate Microsoft Defender for Cloud (MDC) plans.
+
+The module supports the following onboarding types:
+
+1. <u>Single Subscription</u>: Onboard MDC plans for a single subscription.
+2. <u>Chosen Subscriptions</u>: Onboard MDC plans for a selected list of subscriptions.
+3. <u>All Subscriptions</u>: Onboard MDC plans for all subscriptions where your account holds owner permissions.
+4. <u>Management Group</u>: Onboard MDC plans for all subscriptions within a designated management group.
+
 ### Terraform and terraform-provider-azurerm version restrictions
 
 Terraform core's version is v1.x and terraform-provider-azurerm's version is v3.x.
 
-## Example Usage
+## Usage
 
-### <u>Enable plans</u>
+### Enable plans
 
-Please refer to the sub folders under `examples` folder. 
+To enable plans using this module, follow these steps based on the subscription type:
 
-For your convenience there are four different examples of using the module:
-1. Single subscription - onboarding to a single subscription.
-2. Chosen subscriptions - onboarding to a list of subscription.
-3. All subscription - onboarding to all subscriptions your account have owner permission on.
-4. Management group - onboarding to all the subscription in a management group.
- 
-For **single subscription** example you can execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
+#### Single Subscription
 
-For **mangement group, chosen and all subscription** examples you can execute `terraform apply` command. After executing, a new directory name `output` will be added to the example folder. Enter the new `output` folder, edit the `main` file for your needs and execute `terraform apply` again.
+1. Navigate to `examples\single_subscription` folder.
+2. Execute the `terraform apply` command.
+3. Your onboarding will be applied exclusively to the subscription you are currently connected to.
 
- These examples are tested against every PR with the E2E test.
+#### Chosen Subscriptions / All Subscriptions / Management Group
 
-### <u>Disable plans</u>
+1. Enter the relevant folder under `examples` based on your scenario.
+2. Execute the `terraform apply` command.
+3. After the execution, a new directory named `output` will be generated within the example folder.
+4. Access the newly created `output` folder.
+5. Modify the `main.tf` file within this folder to align with your specific requirements.
+6. Execute the `terraform apply` command again to apply your modifications.
+
+### Disable plans
+
 * To disable all plans execute `terraform destroy` command.
-
 * To disable a specific plan, remove the plan name from mdc_plans_list var and execute `terraform apply` command.
 
-## Pre-Commit & Pr-Check & Test
+## Contributing
 ### Configurations
 
 - [Configure Terraform for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure)
@@ -58,6 +68,8 @@ $env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
 $env:ARM_CLIENT_ID="<service_principal_appid>"
 $env:ARM_CLIENT_SECRET="<service_principal_password>"
 ```
+
+### Pre-Commit & Pr-Check &  E2E Test
 
 We provide a docker image to run the pre-commit checks and tests for you: `mcr.microsoft.com/azterraform:latest`
 
@@ -105,20 +117,7 @@ On Windows Powershell:
 ```text
 docker run --rm -v ${pwd}:/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET mcr.microsoft.com/azterraform:latest make e2e-test
 ```
-
-#### Prerequisites
-
-- [Docker](https://www.docker.com/community-edition#/download)
-
-## Authors
-
-Originally created by [Eli Betito](https://github.com/elibetito-microsoft) and [Ori Ben Arzty](https://github.com/oribenartzyM)
-
-## License
-
-[MIT](LICENSE)
-
-## Contributing
+#### Notice to contributor
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -131,6 +130,14 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Authors
+
+Originally created by [Eli Betito](https://github.com/elibetito-microsoft) and [Ori Ben Arzty](https://github.com/oribenartzyM)
+
+## License
+
+[MIT](LICENSE)
 
 ## Module Spec
 
@@ -165,6 +172,7 @@ No modules.
 | [azurerm_security_center_auto_provisioning.la_auto_provisioning](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_auto_provisioning) | resource    |
 | [azurerm_security_center_setting.setting_mcas](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_setting)                             | resource    |
 | [azurerm_security_center_subscription_pricing.asc_plans](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing)      | resource    |
+| [azurerm_security_center_subscription_pricing.cloudposture](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing)   | resource    |
 | [azurerm_subscription_policy_assignment.container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                  | resource    |
 | [azurerm_subscription_policy_assignment.sql](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                        | resource    |
 | [azurerm_subscription_policy_assignment.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                         | resource    |
@@ -184,7 +192,7 @@ No modules.
 | <a name="input_default_tier"></a> [default\_tier](#input\_default\_tier)                           | (Optional) The pricing tier to use. Possible values are `Free` and `Standard`                                                                                                                | `string`      | `"Standard"`                                                                                                                                                                                                                                                                       |    no    |
 | <a name="input_location"></a> [location](#input\_location)                                         | (Optional) The location/region where the policy should exist.                                                                                                                                | `string`      | `"West Europe"`                                                                                                                                                                                                                                                                    |    no    |
 | <a name="input_mdc_databases_plans"></a> [mdc\_databases\_plans](#input\_mdc\_databases\_plans)    | (Optional) Set of all MDC databases plans                                                                                                                                                    | `set(string)` | <pre>[<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs"<br>]</pre>                                                                                                                                                       |    no    |
-| <a name="input_mdc_plans_list"></a> [mdc\_plans\_list](#input\_mdc\_plans\_list)                   | (Optional) Set of all MDC plans                                                                                                                                                              | `set(string)` | <pre>[<br>  "AppServices",<br>  "Arm",<br>  "CloudPosture",<br>  "Containers",<br>  "Dns",<br>  "KeyVaults",<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs",<br>  "StorageAccounts",<br>  "VirtualMachines"<br>]</pre> |    no    |
+| <a name="input_mdc_plans_list"></a> [mdc\_plans\_list](#input\_mdc\_plans\_list)                   | (Optional) Set of all MDC plans                                                                                                                                                              | `set(string)` | <pre>[<br>  "AppServices",<br>  "Arm",<br>  "CloudPosture",<br>  "Containers",<br>  "KeyVaults",<br>  "OpenSourceRelationalDatabases",<br>  "SqlServers",<br>  "SqlServerVirtualMachines",<br>  "CosmosDbs",<br>  "StorageAccounts",<br>  "VirtualMachines",<br>  "Api"<br>]</pre> |    no    |
 | <a name="input_subplans"></a> [subplans](#input\_subplans)                                         | (Optional) A map of resource type pricing subplan, the key is resource type. This variable takes precedence over `var.default_subplan`. Contact your MSFT representative for possible values | `map(string)` | `{}`                                                                                                                                                                                                                                                                               |    no    |
 | <a name="input_tracing_tags_enabled"></a> [tracing\_tags\_enabled](#input\_tracing\_tags\_enabled) | Whether enable tracing tags that generated by BridgeCrew Yor.                                                                                                                                | `bool`        | `false`                                                                                                                                                                                                                                                                            |    no    |
 | <a name="input_tracing_tags_prefix"></a> [tracing\_tags\_prefix](#input\_tracing\_tags\_prefix)    | Default prefix for generated tracing tags                                                                                                                                                    | `string`      | `"avm_"`                                                                                                                                                                                                                                                                           |    no    |

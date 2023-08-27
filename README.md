@@ -7,45 +7,45 @@
 
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
-This Terraform module turn on Microsoft Defender for Cloud (MDC) plans for single or multiple subscriptions.
- 
+This Terraform module enables the activation of Microsoft Defender for Cloud (MDC) plans at scale. Featuring four adaptable onboarding methods, the module covers a diverse spectrum of scenarios and use cases, providing you with the means to effectively utilize it according to your requirements.
+
+The available onboarding methods are as follows:
+
+1. Single Subscription: Onboard MDC plans for a single subscription.
+2. Chosen Subscriptions: Onboard MDC plans for a selected list of subscriptions.
+3. All Subscriptions: Onboard MDC plans for all subscriptions where your account holds owner permissions.
+4. Management Group: Onboard MDC plans for all subscriptions within a designated management group.
+
 ### Terraform and terraform-provider-azurerm version restrictions
 
 Terraform core's version is v1.x and terraform-provider-azurerm's version is v3.x.
 
 ## Module Usage
 
-Example for single subscription:
-
-```tf
-module "mdc-defender-plans-azure" {
-  source  = "Azure/mdc-defender-plans-azure/azure"
-  mdc_plans_list = <list of plans to onboard>
-}
-
-provider "azurerm" {
-  features {}
-}
-```
-Execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
-
-## Example Usage
-
 ### <u>Enable plans</u>
 
-Please refer to the sub folders under `examples` folder. 
+To enable plans using this module, follow these steps based on the subscription type:
 
-For your convenience there are four different examples of using the module:
-1. Single subscription - onboarding to a single subscription.
-2. Chosen subscriptions - onboarding to a list of subscription.
-3. All subscription - onboarding to all subscriptions your account have owner permission on.
-4. Management group - onboarding to all the subscription in a management group.
- 
-For **single subscription** example you can execute `terraform apply` command, the onboarding will apply on the subscription you are connected to.
+#### Single Subscription
 
-For **mangement group, chosen and all subscription** examples you can execute `terraform apply` command. After executing, a new directory name `output` will be added to the example folder. Enter the new `output` folder, edit the `main` file for your needs and execute `terraform apply` again.
+1. Navigate to `examples\single_subscription` folder.
+2. Execute the `terraform apply` command.
+3. Your onboarding will be applied exclusively to the subscription you are currently connected to.
+
+#### Chosen Subscriptions, All Subscriptions, and Management Group
+
+For these scenarios, the process is the same:
+
+1. Enter the relevant folder under `examples` based on your scenario.
+2. Execute the `terraform apply` command.
+3. After the execution, a new directory named `output` will be generated within the example folder.
+4. Access the newly created `output` folder.
+5. Modify the `main.tf` file within this folder to align with your specific requirements.
+6. Execute the `terraform apply` command again to apply your modifications.
+
 
 ### <u>Disable plans</u>
+
 * To disable all plans execute `terraform destroy` command.
 
 * To disable a specific plan, remove the plan name from mdc_plans_list var and execute `terraform apply` command.
@@ -121,6 +121,7 @@ On Windows Powershell:
 ```text
 docker run --rm -v ${pwd}:/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET mcr.microsoft.com/azterraform:latest make e2e-test
 ```
+#### Notice to contributor
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us

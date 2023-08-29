@@ -163,26 +163,27 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                                                                | Type        |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| [azurerm_role_assignment.va_auto_provisioning_containers_role](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)                     | resource    |
-| [azurerm_role_assignment.va_auto_provisioning_la_role](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)                             | resource    |
-| [azurerm_role_assignment.va_auto_provisioning_vm_role](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)                             | resource    |
-| [azurerm_security_center_auto_provisioning.auto_provisioning](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_auto_provisioning)    | resource    |
-| [azurerm_security_center_auto_provisioning.la_auto_provisioning](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_auto_provisioning) | resource    |
-| [azurerm_security_center_setting.setting_mcas](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_setting)                             | resource    |
-| [azurerm_security_center_subscription_pricing.asc_plans](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing)      | resource    |
-| [azurerm_security_center_subscription_pricing.cloudposture](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing)   | resource    |
-| [azurerm_subscription_policy_assignment.container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                  | resource    |
-| [azurerm_subscription_policy_assignment.sql](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                        | resource    |
-| [azurerm_subscription_policy_assignment.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                         | resource    |
-| [azurerm_policy_definition.container_policies](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/policy_definition)                                | data source |
-| [azurerm_policy_definition.la_policies](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/policy_definition)                                       | data source |
-| [azurerm_policy_definition.vm_policies](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/policy_definition)                                       | data source |
-| [azurerm_role_definition.container_roles](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/role_definition)                                       | data source |
-| [azurerm_role_definition.la_roles](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/role_definition)                                              | data source |
-| [azurerm_role_definition.vm_roles](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/role_definition)                                              | data source |
-| [azurerm_subscription.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subscription)                                                     | data source |
+| Name                                                                                                                                                                                 | Type        |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| [azurerm_role_assignment.va_auto_provisioning_containers_role](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)                      | resource    |
+| [azurerm_role_assignment.va_auto_provisioning_la_role](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)                              | resource    |
+| [azurerm_role_assignment.va_auto_provisioning_vm_role](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)                              | resource    |
+| [azurerm_security_center_auto_provisioning.auto_provisioning](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_auto_provisioning)     | resource    |
+| [azurerm_security_center_auto_provisioning.la_auto_provisioning](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_auto_provisioning)  | resource    |
+| [azurerm_security_center_setting.setting_mcas](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_setting)                              | resource    |
+| [azurerm_security_center_subscription_pricing.asc_plans](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing)       | resource    |
+| [azurerm_security_center_subscription_pricing.cloudposture](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing)    | resource    |
+| [azurerm_security_center_subscription_pricing.virtualmachines](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing) | resource    |
+| [azurerm_subscription_policy_assignment.container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                   | resource    |
+| [azurerm_subscription_policy_assignment.sql](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                         | resource    |
+| [azurerm_subscription_policy_assignment.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subscription_policy_assignment)                          | resource    |
+| [azurerm_policy_definition.container_policies](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/policy_definition)                                 | data source |
+| [azurerm_policy_definition.la_policies](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/policy_definition)                                        | data source |
+| [azurerm_policy_definition.vm_policies](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/policy_definition)                                        | data source |
+| [azurerm_role_definition.container_roles](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/role_definition)                                        | data source |
+| [azurerm_role_definition.la_roles](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/role_definition)                                               | data source |
+| [azurerm_role_definition.vm_roles](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/role_definition)                                               | data source |
+| [azurerm_subscription.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subscription)                                                      | data source |
 
 ## Inputs
 

@@ -6,6 +6,8 @@
 
 - Added additional\_extension\_properties for virtual machines plans [\#32](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/32) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 
+## [v0.5.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.5.0) (2023-08-30)
+
 ## [v0.4.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.4.0) (2023-08-30)
 
 **Merged pull requests:**

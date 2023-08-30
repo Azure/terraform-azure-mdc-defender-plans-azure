@@ -16,6 +16,9 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
   dynamic "extension" {
     for_each = each.key == "VirtualMachines" ? [1] : []
     content {
+      additional_extension_properties = {
+        ExclusionTags = "[]"
+      }
       name = "AgentlessVmScanning"
     }
   }

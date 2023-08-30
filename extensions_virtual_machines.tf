@@ -31,17 +31,6 @@ locals {
   }
 }
 
-resource "azurerm_security_center_subscription_pricing" "virtualmachines" {
-  count = contains(var.mdc_plans_list, "VirtualMachines") ? 1 : 0
-
-  tier          = "Standard"
-  resource_type = "VirtualMachines"
-
-  extension {
-    name = "AgentlessVmScanning"
-  }
-}
-
 # Enabling vm extensions - Log Analytics for arc and vulnerability assessment
 data "azurerm_policy_definition" "vm_policies" {
   for_each = contains(var.mdc_plans_list, "VirtualMachines") ? local.virtual_machine_policies : {}

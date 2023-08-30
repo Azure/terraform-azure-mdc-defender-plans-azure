@@ -59,7 +59,7 @@ resource "azurerm_security_center_auto_provisioning" "la_auto_provisioning" {
 # Enabling Log Analytics Roles
 data "azurerm_role_definition" "la_roles" {
   for_each = local.sql_server_virtual_machines_enabled ? local.log_analytics_roles : {}
-
+  scope              = data.azurerm_subscription.current.id
   name = each.value.name
 }
 

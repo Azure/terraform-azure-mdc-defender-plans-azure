@@ -73,8 +73,8 @@ resource "azurerm_subscription_policy_assignment" "container" {
 # Enabling Containers Roles
 data "azurerm_role_definition" "container_roles" {
   for_each = contains(var.mdc_plans_list, "Containers") ? local.container_roles : {}
-  scope              = data.azurerm_subscription.current.id
-  name = each.value.name
+  scope    = data.azurerm_subscription.current.id
+  name     = each.value.name
 }
 
 resource "azurerm_role_assignment" "va_auto_provisioning_containers_role" {

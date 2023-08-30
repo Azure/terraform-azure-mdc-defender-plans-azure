@@ -1,6 +1,6 @@
 locals {
-  final_plans_list        = contains(var.mdc_plans_list, "CloudPosture") ? setsubtract(setunion(local.plans_without_databases), ["CloudPosture"]) : local.plans_without_databases
   plans_without_databases = contains(var.mdc_plans_list, "Databases") ? setsubtract(setunion(var.mdc_plans_list, var.mdc_databases_plans), ["Databases"]) : var.mdc_plans_list
+  final_plans_list        = contains(var.mdc_plans_list, "CloudPosture") ? setsubtract(setunion(local.plans_without_databases), ["CloudPosture"]) : local.plans_without_databases
 }
 
 data "azurerm_subscription" "current" {}
@@ -12,4 +12,11 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
   resource_type = each.value
   # For "StorageAccounts" subplan is "PerStorageAccount". For other plans subplan is null.
   subplan = lookup(var.subplans, each.key, each.key == "StorageAccounts" ? "PerStorageAccount" : var.default_subplan)
+
+  dynamic "extension" {
+    for_each = each.key == "VirtualMachines" ? [1] : []
+    content {
+      name = "AgentlessVmScanning"
+    }
+  }
 }

@@ -83,8 +83,9 @@ resource "azurerm_security_center_setting" "setting_mcas" {
 # Enabling vm Roles
 data "azurerm_role_definition" "vm_roles" {
   for_each = contains(var.mdc_plans_list, "VirtualMachines") ? local.virtual_machine_roles : {}
-  scope    = data.azurerm_subscription.current.id
-  name     = each.value.name
+
+  name  = each.value.name
+  scope = data.azurerm_subscription.current.id
 }
 
 resource "azurerm_role_assignment" "va_auto_provisioning_vm_role" {

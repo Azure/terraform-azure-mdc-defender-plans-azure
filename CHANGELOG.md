@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- VirtualMachines fix [\#31](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/31) ([oribenartzyM](https://github.com/oribenartzyM))
 - Add new plans to module [\#30](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/30) ([oribenartzyM](https://github.com/oribenartzyM))
 
 ## [v0.3.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.3.0) (2023-08-27)

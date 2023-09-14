@@ -2,7 +2,7 @@
 
 -> **NOTE:** This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
 
--> **NOTE:** When running the module, your subscription should not already be onboarding to MDC. Please refer to the [Already onboarded subscription](#Already-onboarded-subscription) section if you have already completed the onboarding process.
+-> **NOTE:** When running the module, your subscription should not already be onboarded to MDC. If you have already completed the onboarding process, please refer to the  [Onboarded Azure Subscription](#Onboarded-Azure-Subscription) section.
 
 ~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
 
@@ -48,7 +48,7 @@ To enable plans using this module, follow these steps based on the subscription 
 * To disable all plans execute `terraform destroy` command.
 * To disable a specific plan, remove the plan name from mdc_plans_list var and execute `terraform apply` command.
 
-### Already onboarded subscription
+### Onboarded Azure Subscription
 We recommend managing the entire onboarding process with our module. If you've already onboarded your Azure Subscription to Microsoft Defender for Cloud plans, you have several options:
 
 #### Azure Defender Plans UI Portal

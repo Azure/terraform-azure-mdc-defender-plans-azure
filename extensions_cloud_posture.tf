@@ -14,9 +14,9 @@ resource "azurerm_security_center_subscription_pricing" "cloudposture" {
     name = "AgentlessDiscoveryForKubernetes"
   }
   extension {
+    name = "AgentlessVmScanning"
     additional_extension_properties = {
       ExclusionTags = "[]"
     }
-    name = "AgentlessVmScanning"
   }
 }

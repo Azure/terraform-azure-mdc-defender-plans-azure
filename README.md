@@ -2,6 +2,8 @@
 
 -> **NOTE:** This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
 
+-> **NOTE:** When running the module, your subscription should not already be onboarding to MDC. Please refer to the [Already onboarded subscription](#Already-onboarded-subscription) section if you have already completed the onboarding process.
+
 ~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
 
 
@@ -45,6 +47,13 @@ To enable plans using this module, follow these steps based on the subscription 
 
 * To disable all plans execute `terraform destroy` command.
 * To disable a specific plan, remove the plan name from mdc_plans_list var and execute `terraform apply` command.
+
+### Already onboarded subscription
+If you've already onboarded your Azure Subscription to Microsoft Defender for Cloud plans, you have several options:
+1. **Start Fresh**: You can choose to destroy your current Terraform environment and begin anew.
+2. **Import Existing Resources**: Utilize [Terraform import](https://developer.hashicorp.com/terraform/cli/import) to seamlessly integrate existing resources into Terraform management.
+3. **Manage Multiple Terraform States**: Maintain your current state and create a new one for this module, allowing for efficient resource management.
+4. **Manual Cleanup**: Optionally, manually disable plans and delete the extensions and their associated policies.
 
 ## Contributing
 ### Configurations

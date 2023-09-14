@@ -5,6 +5,7 @@
 **Merged pull requests:**
 
 - README: Already Onboarded Subscriptions Update [\#34](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/34) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
+- Bump github.com/gruntwork-io/terratest from 0.43.12 to 0.43.13 in /test [\#33](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/33) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Added additional\_extension\_properties for virtual machines plans [\#32](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/32) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 
 ## [v0.5.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v0.5.0) (2023-08-30)

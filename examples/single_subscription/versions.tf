@@ -8,7 +8,7 @@ terraform {
     }
     modtm = {
       source  = "Azure/modtm"
-      version = ">= 0.1.7, < 1.0"
+      version = ">= 0.1.8, < 1.0"
     }
   }
 }

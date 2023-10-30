@@ -6,6 +6,7 @@
 
 - Add `ignore_changes` to telemetry resource [\#45](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/45) ([lonegunmanb](https://github.com/lonegunmanb))
 - Add telemetry collection resource to this module [\#43](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/43) ([lonegunmanb](https://github.com/lonegunmanb))
+- Bump github.com/gruntwork-io/terratest from 0.43.13 to 0.46.1 in /test [\#42](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/42) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Rename to CHANGELOG-v0 and add a black CHANGELOG [\#41](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/41) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - README: Already Onboarded Subscriptions Update [\#34](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/34) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Bump github.com/gruntwork-io/terratest from 0.43.12 to 0.43.13 in /test [\#33](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/33) ([dependabot[bot]](https://github.com/apps/dependabot))

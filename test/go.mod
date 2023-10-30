@@ -1,6 +1,8 @@
 module main
 
-go 1.19
+go 1.21
+
+toolchain go1.21.2
 
 require (
 	github.com/Azure/terraform-module-test-helper v0.16.0

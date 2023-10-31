@@ -4,7 +4,6 @@
 
 ~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
 
-
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
 This Terraform module activate Microsoft Defender for Cloud (MDC) plans.

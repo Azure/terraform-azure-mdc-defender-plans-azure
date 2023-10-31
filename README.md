@@ -1,11 +1,8 @@
 # terraform-azure-mdc-defender-plans-azure
 
--> **NOTE:** This module is still in development and we are currently in a preview version. As such, any usage of the module is at your own risk and responsibility.
-
 -> **NOTE:** When running the module, your subscription should not already be onboarded to MDC. If you have already completed the onboarding process, please refer to the  [Onboarded Azure Subscription](#Onboarded-Azure-Subscription) section.
 
 ~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
-
 
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 

@@ -1,6 +1,6 @@
 # terraform-azure-mdc-defender-plans-azure
 
--> **NOTE:** When running the module, your subscription should not already be onboarded to MDC. If you have already completed the onboarding process, please refer to the  [Onboarded Azure Subscription](#Onboarded-Azure-Subscription) section.
+-> **NOTE:** When running the module, your subscription should not already be onboarded to MDC. If you have already completed the onboarding process, please refer to the  [Onboarded Azure Subscription](#onboarded-azure-subscription) section.
 
 ~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
 

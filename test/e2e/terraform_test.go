@@ -49,7 +49,7 @@ func TestExamples_single_subscription(t *testing.T) {
 func cleanAllExistingPlans(t *testing.T, moduleRoot string, examplePath string, plans []string, vars map[string]interface{}) {
 	subId := os.Getenv("ARM_SUBSCRIPTION_ID")
 	if subId == "" {
-		return
+		t.Skip("you need environment variable `ARM_SUBSCRIPTION_ID` to run this test.")
 	}
 	tmpFolder := teststructure.CopyTerraformFolderToTemp(t, moduleRoot, examplePath)
 	defer func() {

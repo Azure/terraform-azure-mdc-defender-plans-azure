@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
+
+**Merged pull requests:**
+
+- Bump github.com/Azure/terraform-module-test-helper from 0.16.0 to 0.17.0 in /test [\#47](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.0.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v1.0.0) (2023-10-31)
 
 **Merged pull requests:**

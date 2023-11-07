@@ -8,7 +8,7 @@ resource "modtm_telemetry" "this" {
     avm_git_org              = "Azure"
     avm_git_repo             = "terraform-azure-mdc-defender-plans-azure"
   }
-  nonce = 2968
+  nonce = 27263
 
   lifecycle {
     ignore_changes = [nonce]

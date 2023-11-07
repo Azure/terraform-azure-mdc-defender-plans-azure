@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump github.com/gruntwork-io/terratest from 0.46.1 to 0.46.6 in /test [\#50](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/50) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Add a setup step to clean all potential existing plans before test [\#49](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/49) ([lonegunmanb](https://github.com/lonegunmanb))
 - Bump github.com/Azure/terraform-module-test-helper from 0.16.0 to 0.17.0 in /test [\#47](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
 

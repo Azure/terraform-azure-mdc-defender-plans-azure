@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Add a setup step to clean all potential existing plans before test [\#49](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/49) ([lonegunmanb](https://github.com/lonegunmanb))
 - Bump github.com/Azure/terraform-module-test-helper from 0.16.0 to 0.17.0 in /test [\#47](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v1.0.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v1.0.0) (2023-10-31)

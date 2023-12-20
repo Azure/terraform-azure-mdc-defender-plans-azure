@@ -22,4 +22,34 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
       }
     }
   }
+  dynamic "extension" {
+    for_each = each.key == "Containers" ? [1] : []
+    content {
+      name = "AgentlessDiscoveryForKubernetes"
+    }
+  }
+
+  dynamic "extension" {
+    for_each = each.key == "Containers" ? [1] : []
+    content {
+      name = "ContainerRegistriesVulnerabilityAssessments"
+    }
+  }
+
+  dynamic "extension" {
+    for_each = each.key == "StorageAccounts" ? [1] : []
+    content {
+      name = "OnUploadMalwareScanning"
+      additional_extension_properties = {
+        # Set to -1 to remove the limit, default is 5000GB
+        CapGBPerMonthPerStorageAccount = "5000"
+      }
+    }
+  }
+  dynamic "extension" {
+    for_each = each.key == "StorageAccounts" ? [1] : []
+    content {
+      name = "SensitiveDataDiscovery"
+    }
+  }
 }

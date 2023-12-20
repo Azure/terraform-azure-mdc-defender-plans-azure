@@ -20,6 +20,10 @@ variable "mdc_plans_list" {
 variable "subplans" {
   type = map(string)
   default = {
+    "Api" : "P1"
+    "Arm" : "PerSubscription"
+    "KeyVaults" : "PerKeyVault"
+    "StorageAccounts" : "DefenderForStorageV2"
     "VirtualMachines" : "P2"
   }
   description = "(Optional) A map of resource type pricing subplan, the key is resource type. This variable takes precedence over `var.default_subplan`. Contact your MSFT representative for possible values"

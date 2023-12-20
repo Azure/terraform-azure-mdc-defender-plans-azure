@@ -19,4 +19,9 @@ resource "azurerm_security_center_subscription_pricing" "cloudposture" {
       ExclusionTags = "[]"
     }
   }
+
+  # Preview - Permissions Management
+  extension {
+    name = "EntraPermissionsManagement"
+  }
 }

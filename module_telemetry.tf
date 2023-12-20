@@ -8,9 +8,9 @@ resource "modtm_telemetry" "this" {
     avm_git_org              = "Azure"
     avm_git_repo             = "terraform-azure-mdc-defender-plans-azure"
   }
-  nonce = 27263
+  ephemeral_number = 27263
 
   lifecycle {
-    ignore_changes = [nonce]
+    ignore_changes = [ephemeral_number]
   }
 }

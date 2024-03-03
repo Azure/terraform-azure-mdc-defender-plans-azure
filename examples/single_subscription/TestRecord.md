@@ -1,3 +1,20 @@
+## 03 Mar 24 00:41 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.7.0
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.94.0
+
+### Error
+
+
+
+---
+
 ## 25 Feb 24 00:41 UTC
 
 Success: true

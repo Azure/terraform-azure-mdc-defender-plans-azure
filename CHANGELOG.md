@@ -5,6 +5,7 @@
 **Merged pull requests:**
 
 - Bump golang.org/x/net from 0.17.0 to 0.23.0 in /test [\#65](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/65) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump github.com/Azure/terraform-module-test-helper from 0.17.0 to 0.20.0 in /test [\#63](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/63) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.46.8 to 0.46.13 in /test [\#62](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/62) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump google.golang.org/protobuf from 1.31.0 to 1.33.0 in /test [\#61](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/61) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/stretchr/testify from 1.8.4 to 1.9.0 in /test [\#59](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))

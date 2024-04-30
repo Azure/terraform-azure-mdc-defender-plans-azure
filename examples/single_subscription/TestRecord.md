@@ -1,3 +1,122 @@
+## 30 Apr 24 12:18 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.101.0
+
+### Error
+
+
+
+---
+
+## 30 Apr 24 11:47 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.101.0
+
+### Error
+
+
+
+---
+
+## 28 Apr 24 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.101.0
+
+### Error
+
+
+
+---
+
+## 21 Apr 24 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.100.0
+
+### Error
+
+
+
+---
+
+## 14 Apr 24 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.99.0
+
+### Error
+
+
+
+---
+
+## 07 Apr 24 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.98.0
+
+### Error
+
+
+
+---
+
+## 31 Mar 24 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.7.5
+on linux_amd64
++ provider registry.terraform.io/azure/modtm v0.2.0
++ provider registry.terraform.io/hashicorp/azurerm v3.97.1
+
+### Error
+
+
+
+---
+
 ## 24 Mar 24 00:41 UTC
 
 Success: false

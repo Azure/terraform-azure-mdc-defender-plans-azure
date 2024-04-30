@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump github.com/stretchr/testify from 1.8.4 to 1.9.0 in /test [\#59](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump golang.org/x/crypto from 0.14.0 to 0.17.0 in /test [\#53](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/53) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.46.6 to 0.46.8 in /test [\#52](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/52) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/gruntwork-io/terratest from 0.46.1 to 0.46.6 in /test [\#50](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/50) ([dependabot[bot]](https://github.com/apps/dependabot))

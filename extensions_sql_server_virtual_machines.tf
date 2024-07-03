@@ -1,20 +1,20 @@
 locals {
   log_analytics_policies = {
-    mdc-log-analytics-arc1-autoprovisioning = {
+    mdc-log-analytics-arc1-autoprovisioning-sql = {
       definition_display_name = "[Preview]: Configure Azure Arc-enabled Windows machines with Log Analytics agents connected to default Log Analytics workspace"
     }
-    mdc-log-analytics-arc2-autoprovisioning = {
+    mdc-log-analytics-arc2-autoprovisioning-sql = {
       definition_display_name = "[Preview]: Configure Azure Arc-enabled Linux machines with Log Analytics agents connected to default Log Analytics workspace"
     }
   }
   log_analytics_roles = {
     sql-server-virtual-machines-arc1-role-1 = {
       name   = "Contributor"
-      policy = "mdc-log-analytics-arc1-autoprovisioning"
+      policy = "mdc-log-analytics-arc1-autoprovisioning-sql"
     }
     sql-server-virtual-machines-arc2-role-1 = {
       name   = "Contributor"
-      policy = "mdc-log-analytics-arc2-autoprovisioning"
+      policy = "mdc-log-analytics-arc2-autoprovisioning-sql"
     }
   }
   sql_server_virtual_machines_enabled = contains(local.final_plans_list, "SqlServerVirtualMachines") && !contains(var.mdc_plans_list, "VirtualMachines")

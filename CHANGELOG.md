@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Upgrade default Storage subplan from PerStorageAccount to DefenderFor… [\#74](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/74) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Bump github.com/gruntwork-io/terratest from 0.46.15 to 0.46.16 in /test [\#73](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/73) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/Azure/terraform-module-test-helper from 0.20.0 to 0.24.0 in /test [\#72](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/72) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/Azure/terraform-module-test-helper from 0.20.0 to 0.22.0 in /test [\#69](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/69) ([dependabot[bot]](https://github.com/apps/dependabot))

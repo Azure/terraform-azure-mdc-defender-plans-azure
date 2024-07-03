@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Modify the Storage plan and update gitignore file [\#77](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/77) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Rename Policies for Containers, SQL Server Virtual Machines, and Virtual Machines to Prevent Conflicts [\#76](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/76) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Upgrade default Storage subplan from PerStorageAccount to DefenderFor… [\#74](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/74) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Bump github.com/gruntwork-io/terratest from 0.46.15 to 0.46.16 in /test [\#73](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/73) ([dependabot[bot]](https://github.com/apps/dependabot))

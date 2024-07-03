@@ -70,3 +70,6 @@ TestRecord/
 
 # Visual Studio Code settings file
 .vscode/settings.json
+
+# Output folder
+output/

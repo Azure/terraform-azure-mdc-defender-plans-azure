@@ -10,8 +10,8 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
 
   tier          = var.default_tier
   resource_type = each.value
-  # For "StorageAccounts" subplan is "DefenderForStorageV2". For other plans subplan is null.
-  subplan = lookup(var.subplans, each.key, each.key == "StorageAccounts" ? "DefenderForStorageV2" : var.default_subplan)
+  # For "StorageAccounts" subplan is "PerStorageAccount". For other plans subplan is null.
+  subplan = lookup(var.subplans, each.key, each.key == "StorageAccounts" ? "PerStorageAccount" : var.default_subplan)
 
   dynamic "extension" {
     for_each = each.key == "VirtualMachines" ? [1] : []

@@ -22,4 +22,16 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
       }
     }
   }
+  dynamic "extension" {
+    for_each = each.key == "Containers" ? [1] : []
+    content {
+      name = "ContainerRegistriesVulnerabilityAssessments"
+    }
+  }
+  dynamic "extension" {
+    for_each = each.key == "Containers" ? [1] : []
+    content {
+      name = "AgentlessDiscoveryForKubernetes"
+    }
+  }
 }

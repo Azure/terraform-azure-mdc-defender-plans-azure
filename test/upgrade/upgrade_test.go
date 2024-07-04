@@ -16,7 +16,7 @@ func TestExampleUpgrade_basic(t *testing.T) {
 	if err != nil {
 		t.FailNow()
 	}
-	test_helper.ModuleUpgradeTest(t, "oribenartzyM", "terraform-azurerm-mdc", "examples/single_subscription", currentRoot, terraform.Options{
+	test_helper.ModuleUpgradeTest(t, "elibetito-microsoft", "terraform-azurerm-mdc", "examples/single_subscription", currentRoot, terraform.Options{
 		Upgrade: true,
 	}, currentMajorVersion)
 }

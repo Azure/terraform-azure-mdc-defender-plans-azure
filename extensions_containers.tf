@@ -85,17 +85,3 @@ resource "azurerm_role_assignment" "va_auto_provisioning_containers_role" {
   scope              = data.azurerm_subscription.current.id
   role_definition_id = data.azurerm_role_definition.container_roles[each.key].id
 }
-
-resource "azurerm_security_center_subscription_pricing" "containers" {
-  count = contains(var.mdc_plans_list, "Containers") ? 1 : 0
-
-  tier          = "Standard"
-  resource_type = "Containers"
-
-  extension {
-    name = "ContainerRegistriesVulnerabilityAssessments"
-  }
-  extension {
-    name = "AgentlessDiscoveryForKubernetes"
-  }
-}

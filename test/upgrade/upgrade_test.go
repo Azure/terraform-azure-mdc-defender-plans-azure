@@ -2,10 +2,11 @@ package upgrade
 
 import (
 	"fmt"
-	"github.com/gruntwork-io/terratest/modules/logger"
-	teststructure "github.com/gruntwork-io/terratest/modules/test-structure"
 	"os"
 	"testing"
+
+	"github.com/gruntwork-io/terratest/modules/logger"
+	teststructure "github.com/gruntwork-io/terratest/modules/test-structure"
 
 	test_helper "github.com/Azure/terraform-module-test-helper"
 	"github.com/gruntwork-io/terratest/modules/terraform"

@@ -24,6 +24,7 @@ func TestExamples_single_subscription(t *testing.T) {
 		"CosmosDbs",
 		"StorageAccounts",
 		"Api",
+		"VirtualMachines",
 	}
 	vars := map[string]interface{}{
 		"mdc_plans_list": plans,

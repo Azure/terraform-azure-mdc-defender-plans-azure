@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Add the varaible storage\_accounts\_malware\_scan\_cap\_gb\_per\_month [\#82](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/82) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Merge Extension into asc\_plans and upgrade Storage subplan [\#79](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/79) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Modify the Storage plan and update gitignore file [\#77](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/77) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Rename Policies for Containers, SQL Server Virtual Machines, and Virtual Machines to Prevent Conflicts [\#76](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/76) ([elibetito-microsoft](https://github.com/elibetito-microsoft))

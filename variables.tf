@@ -49,6 +49,12 @@ variable "mdc_plans_list" {
   nullable    = false
 }
 
+variable "storage_accounts_malware_scan_cap_gb_per_month" {
+  type        = string
+  default     = "5000"
+  description = "(Optional) Sets the maximum GB limit for malware scanning on uploaded files per storage account per month"
+}
+
 variable "subplans" {
   type        = map(string)
   default     = {}
@@ -70,10 +76,4 @@ variable "tracing_tags_prefix" {
   default     = "avm_"
   description = "Default prefix for generated tracing tags"
   nullable    = false
-}
-
-variable "storage_accounts_malware_scan_cap_gb_per_month" {
-  type        = string
-  default     = "5000"
-  description = "(Optional) Sets the maximum GB limit for malware scanning on uploaded files per storage account per month"
 }

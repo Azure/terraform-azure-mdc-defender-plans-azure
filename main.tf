@@ -38,7 +38,7 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
     content {
       name = "OnUploadMalwareScanning"
       additional_extension_properties = {
-        CapGBPerMonthPerStorageAccount = "5000"
+        CapGBPerMonthPerStorageAccount = var.storage_accounts_malware_scan_cap_gb_per_month
       }
     }
   }

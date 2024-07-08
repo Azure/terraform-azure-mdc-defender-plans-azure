@@ -71,3 +71,9 @@ variable "tracing_tags_prefix" {
   description = "Default prefix for generated tracing tags"
   nullable    = false
 }
+
+variable "storage_accounts_malware_scan_cap_gb_per_month" {
+  type        = string
+  default     = "5000"
+  description = "(Optional) Sets the maximum GB limit for malware scanning on uploaded files per storage account per month"
+}

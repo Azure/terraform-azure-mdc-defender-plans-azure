@@ -4,6 +4,19 @@
 
 ~> **NOTE:** Deletion of the resource will reset the pricing tier to `Free`
 
+## Notice on breaking changes
+
+Please be aware that major version(e.g., from 1.0.0 to 2.0.0) update contains breaking changes that may impact your infrastructure. It is crucial to review these changes with caution before proceeding with the upgrade.
+
+In most cases, you will need to adjust your Terraform code to accommodate the changes introduced in the new major version. We strongly recommend reviewing the changelog and migration guide to understand the modifications and ensure a smooth transition.
+
+To help you in this process, we have provided detailed documentation on the breaking changes, new features, and any deprecated functionalities. Please take the time to read through these resources to avoid any potential issues or disruptions to your infrastructure.
+
+* [Notice on Upgrade to v2.x](./NoticeOnUpgradeTov2.0.md)
+
+Remember, upgrading to a major version with breaking changes should be done carefully and thoroughly tested in your environment. If you have any questions or concerns, please don't hesitate to reach out to our support team for assistance.
+
+
 ## Onboarding to Microsoft Defender for Cloud (MDC) plans in Azure
 
 This Terraform module activate Microsoft Defender for Cloud (MDC) plans.

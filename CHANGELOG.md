@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Update the Readme with Notice on breaking changes [\#84](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/84) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - prepare for new telemetry [\#83](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/83) ([lonegunmanb](https://github.com/lonegunmanb))
 - Add the varaible storage\_accounts\_malware\_scan\_cap\_gb\_per\_month [\#82](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/82) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Merge Extension into asc\_plans and upgrade Storage subplan [\#79](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/79) ([elibetito-microsoft](https://github.com/elibetito-microsoft))

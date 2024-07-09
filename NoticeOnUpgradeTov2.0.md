@@ -7,7 +7,7 @@ Running the `terraform plan` first to inspect the plan is strongly advised.
 Upgrade the Storage Subplan from `PerStorageAccount` to `DefenderForStorageV2` and activate the `Malware scanning` with the default `CapGBPerMonthPerStorageAccount` value set to 5000.
 
 ## Removal of extensions_cloud_posture.tf File
-The cloudposture extension file has been removed and integrated into the [main.tf](./main.tf) file. It is now part of the `azurerm_security_center_subscription_pricing` resource with a dynamic block.
+The cloudposture extension file has been removed and integrated into the [main.tf](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/blob/03057fbe3bcfbc5888cafd0390ae0e8356643444/main.tf) file. It is now part of the `azurerm_security_center_subscription_pricing` resource with a dynamic block.
 
 ## The following Policies have been renamed for Containers, SQL Server Virtual Machines, and Virtual Machines
 ### `extensions_containers.tf`

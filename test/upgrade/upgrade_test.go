@@ -42,15 +42,13 @@ func TestExampleUpgrade_basic(t *testing.T) {
 	}
 	for _, example := range examples {
 		t.Run(example, func(t *testing.T) {
+			t.Setenv("TF_VAR_enable_telemetry", "false")
 			examplePath := fmt.Sprintf("examples/%s", example)
 			if example == "single_subscription" {
 				cleanAllExistingPlans(t, "../../", examplePath, plans, vars)
 			}
 			test_helper.ModuleUpgradeTest(t, "Azure", "terraform-azure-mdc-defender-plans-azure", examplePath, currentRoot, terraform.Options{
 				Upgrade: true,
-				Vars: map[string]interface{}{
-					"enable_telemetry": false,
-				},
 			}, currentMajorVersion)
 		})
 	}

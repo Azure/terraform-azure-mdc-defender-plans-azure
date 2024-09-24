@@ -1,3 +1,7 @@
+variable "enable_telemetry" {
+  default = false
+}
+
 variable "mdc_plans_list" {
   type = set(string)
   default = [

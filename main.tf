@@ -14,6 +14,7 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
 
   dynamic "extension" {
     for_each = each.key == "VirtualMachines" || each.key == "CloudPosture" ? [1] : []
+
     content {
       name = "AgentlessVmScanning"
       additional_extension_properties = {
@@ -23,18 +24,21 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
   }
   dynamic "extension" {
     for_each = each.key == "Containers" || each.key == "CloudPosture" ? [1] : []
+
     content {
       name = "ContainerRegistriesVulnerabilityAssessments"
     }
   }
   dynamic "extension" {
     for_each = each.key == "Containers" || each.key == "CloudPosture" ? [1] : []
+
     content {
       name = "AgentlessDiscoveryForKubernetes"
     }
   }
   dynamic "extension" {
     for_each = each.key == "StorageAccounts" ? [1] : []
+
     content {
       name = "OnUploadMalwareScanning"
       additional_extension_properties = {
@@ -44,12 +48,14 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
   }
   dynamic "extension" {
     for_each = each.key == "CloudPosture" || each.key == "StorageAccounts" ? [1] : []
+
     content {
       name = "SensitiveDataDiscovery"
     }
   }
   dynamic "extension" {
     for_each = each.key == "CloudPosture" ? [1] : []
+
     content {
       name = "EntraPermissionsManagement"
     }

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
+
+**Merged pull requests:**
+
+- Use oidc as e2e test authentication method [\#89](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/89) ([lonegunmanb](https://github.com/lonegunmanb))
+
 ## [v2.0.0](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v2.0.0) (2024-07-09)
 
 **Merged pull requests:**

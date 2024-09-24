@@ -5,11 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/logger"
-	teststructure "github.com/gruntwork-io/terratest/modules/test-structure"
-
 	test_helper "github.com/Azure/terraform-module-test-helper"
+	"github.com/gruntwork-io/terratest/modules/logger"
 	"github.com/gruntwork-io/terratest/modules/terraform"
+	teststructure "github.com/gruntwork-io/terratest/modules/test-structure"
 )
 
 func TestExampleUpgrade_basic(t *testing.T) {
@@ -21,7 +20,10 @@ func TestExampleUpgrade_basic(t *testing.T) {
 	if err != nil {
 		t.FailNow()
 	}
-	examplePath := "examples/single_subscription"
+	examples, err := allExamples()
+	if err != nil {
+		t.FailNow()
+	}
 	plans := []string{
 		"AppServices",
 		"Arm",
@@ -38,10 +40,35 @@ func TestExampleUpgrade_basic(t *testing.T) {
 	vars := map[string]interface{}{
 		"mdc_plans_list": plans,
 	}
-	cleanAllExistingPlans(t, "../../", examplePath, plans, vars)
-	test_helper.ModuleUpgradeTest(t, "Azure", "terraform-azure-mdc-defender-plans-azure", examplePath, currentRoot, terraform.Options{
-		Upgrade: true,
-	}, currentMajorVersion)
+	for _, example := range examples {
+		t.Run(example, func(t *testing.T) {
+			examplePath := fmt.Sprintf("examples/%s", example)
+			if example == "single_subscription" {
+				cleanAllExistingPlans(t, "../../", examplePath, plans, vars)
+			}
+			test_helper.ModuleUpgradeTest(t, "Azure", "terraform-azure-mdc-defender-plans-azure", examplePath, currentRoot, terraform.Options{
+				Upgrade: true,
+				Vars: map[string]interface{}{
+					"enable_telemetry": false,
+				},
+			}, currentMajorVersion)
+		})
+	}
+}
+
+func allExamples() ([]string, error) {
+	examples, err := os.ReadDir("../../examples")
+	if err != nil {
+		return nil, err
+	}
+	var r []string
+	for _, f := range examples {
+		if !f.IsDir() {
+			continue
+		}
+		r = append(r, f.Name())
+	}
+	return r, nil
 }
 
 func cleanAllExistingPlans(t *testing.T, moduleRoot string, examplePath string, plans []string, vars map[string]interface{}) {

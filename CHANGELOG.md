@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump github.com/Azure/terraform-module-test-helper from 0.26.0 to 0.27.0 in /test [\#94](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/94) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump github.com/Azure/terraform-module-test-helper in /test [\#90](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/90) ([lonegunmanb](https://github.com/lonegunmanb))
 - Use oidc as e2e test authentication method [\#89](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/89) ([lonegunmanb](https://github.com/lonegunmanb))
 

@@ -37,6 +37,13 @@ resource "azurerm_security_center_subscription_pricing" "asc_plans" {
     }
   }
   dynamic "extension" {
+    for_each = each.key == "Containers" ? [1] : []
+
+    content {
+      name = "ContainerSensor"
+    }
+  }
+  dynamic "extension" {
     for_each = each.key == "StorageAccounts" ? [1] : []
 
     content {

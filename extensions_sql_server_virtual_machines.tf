@@ -45,17 +45,6 @@ resource "azurerm_subscription_policy_assignment" "sql" {
   ]
 }
 
-# Enabling extension - Log Analytics for vm
-resource "azurerm_security_center_auto_provisioning" "la_auto_provisioning" {
-  count = local.sql_server_virtual_machines_enabled ? 1 : 0
-
-  auto_provision = "On"
-
-  depends_on = [
-    azurerm_security_center_subscription_pricing.asc_plans["SqlServerVirtualMachines"]
-  ]
-}
-
 # Enabling Log Analytics Roles
 data "azurerm_role_definition" "la_roles" {
   for_each = local.sql_server_virtual_machines_enabled ? local.log_analytics_roles : {}

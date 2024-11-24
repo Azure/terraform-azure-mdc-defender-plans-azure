@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/HEAD)
+## [v2.0.1](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v2.0.1) (2024-11-21)
 
 **Merged pull requests:**
 

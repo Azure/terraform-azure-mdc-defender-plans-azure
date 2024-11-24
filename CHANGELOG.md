@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Add ContainerSensor Extension to azurerm\_security\_center\_subscription\_pricing Resource [\#95](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/95) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Bump github.com/Azure/terraform-module-test-helper from 0.26.0 to 0.27.0 in /test [\#94](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/94) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Remove deprecated Log Analytics agent [\#93](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/93) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 - Bump github.com/gruntwork-io/terratest from 0.47.1 to 0.47.2 in /test [\#91](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/91) ([dependabot[bot]](https://github.com/apps/dependabot))

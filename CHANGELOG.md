@@ -6,6 +6,7 @@
 
 - Bump github.com/stretchr/testify from 1.9.0 to 1.10.0 in /test [\#98](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/98) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Stabilize e2e test [\#97](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/97) ([lonegunmanb](https://github.com/lonegunmanb))
+- Delete azurerm\_security\_center\_auto\_provisioning from SQL Server VM [\#96](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/pull/96) ([elibetito-microsoft](https://github.com/elibetito-microsoft))
 
 ## [v2.0.1](https://github.com/Azure/terraform-azure-mdc-defender-plans-azure/tree/v2.0.1) (2024-11-21)
 

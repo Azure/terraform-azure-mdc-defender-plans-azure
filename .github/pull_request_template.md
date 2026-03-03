@@ -1,13 +1,9 @@
-## Describe your changes
+## What
 
-## Issue number
+## Why
 
-#000
+TECH-
 
-## Checklist before requesting a review
-- [ ] The pr title can be used to describe what this pr did in `CHANGELOG.md` file
-- [ ] I have executed pre-commit on my machine
-- [ ] I have passed pr-check on my machine
+## Testing
 
-Thanks for your cooperation!
-
+> **Note:** For more information, please refer to [pull request guidelines](https://mindera-connells-team.atlassian.net/wiki/spaces/CG/pages/105021509/Pull+request+guidelines).

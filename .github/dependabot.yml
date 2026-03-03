@@ -1,6 +1,19 @@
 version: 2
 updates:
-  - package-ecosystem: "gomod"
-    directory: "/test"
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "weekly"
+      day: "wednesday"
+    registries:
+      - github-shared-workflows
+    groups:
+      workflow:
+        patterns:
+          - "*" # Single PR per update.
+registries:
+  github-shared-workflows:
+    type: git
+    url: "https://github.com"
+    username: "username" #only password is needed, but username is required in the schema
+    password: ${{ secrets.DEPENDABOT_WORKFLOWS_UPDATER_PAT }}

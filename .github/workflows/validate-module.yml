@@ -1,0 +1,12 @@
+name: Terraform Module Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  terraform-module-workflow:
+    uses: connells-tech/shared-workflows/.github/workflows/terraform-module-workflow.yml@v8
+    with:
+      use-tf-testing-environment: true
+    secrets: inherit # required if you want your caller workflow to provide the repository secrets to the shared-workflow

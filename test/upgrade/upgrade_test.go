@@ -34,6 +34,7 @@ func TestExampleUpgrade_basic(t *testing.T) {
 		"StorageAccounts",
 		"Api",
 		"VirtualMachines",
+		"AI",
 	}
 	vars := map[string]interface{}{
 		"mdc_plans_list": plans,

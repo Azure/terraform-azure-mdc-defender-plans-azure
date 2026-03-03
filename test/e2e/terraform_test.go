@@ -25,6 +25,7 @@ func TestExamples_single_subscription(t *testing.T) {
 		"StorageAccounts",
 		"Api",
 		"VirtualMachines",
+		"AI",
 	}
 	vars := map[string]interface{}{
 		"mdc_plans_list": plans,
